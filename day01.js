@@ -53,7 +53,7 @@
 //题目7：匹配所有能够表示JavaScript整数的字符串集
 // {
 //     function regex07(item){
-//         return item.match()
+//         return item.match(/[[^(-|0)]{2,}?\d+/)
 //     }
 //     ['123','-123','---10','0009','0','0000','2342.3','453.45','0123','123','0019'].map(item=>console.log(regex07(item)))
 // }
@@ -87,10 +87,20 @@
 // http://lib.wzmc.edu.cn/news/onews.asp?id=769
 // http://www.zy-ls.com/alfx.asp?newsid=377&id=6
 // http://www.fincm.com/newslist.asp?id=415
-{
-    function regex10(item){
-        return item.match("http://(.+)/")
-    }
+// {
+//     function regex10(item){
+//         return item.match(/(w){3}\.\w+\.\w+/)
+//     }
+//
+//     console.log(regex10("http://www.fincm.com/newslist.asp?id=415"));
+// }
 
-    console.log(regex10("http://www.fincm.com/newslist.asp?id=415"));
-}
+// function myTrim(str){
+//     if (typeof str !== "string"){
+//         return "输入的类型不对"
+//     }else {
+//         return str.replace(/^\s+|\s+$/g,"")
+//     }
+// }
+//
+// console.log(myTrim("   xidsds  ao  "));
