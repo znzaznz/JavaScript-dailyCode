@@ -35,7 +35,26 @@ function straightInsertSort(arr){
 console.log(straightInsertSort(arr));
 
 //希尔排序
-
-function shellSort(){
-
+//希尔排序是直接插入排序的一种改良，他能在大数据排序中效率更好
+//他需要一个分组间隔
+function shellSort(arr,interval){
+    //根据间隔进行排序
+    let len = arr.length,
+        gap = 1;
+    while (gap < len/interval){
+        gap = gap*interval+1
+    }
+    //以上是设置动态增量算法
+    //下面是实现插入环节
+    while (gap >= 1){
+        for (let i = 0; i < len; i++) {
+            for (let j = i; j >= gap && arr[j] < arr[j-gap]; j -= gap) {
+                [arr[j],arr[j-gap]] = [arr[j-gap],arr[j]]
+            }
+        }
+        gap = (gap-1)/3;
+    }
+    return arr
 }
+
+console.log(shellSort(arr, 4));
