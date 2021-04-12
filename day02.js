@@ -49,11 +49,12 @@ function shellSort(arr,interval){
     while (gap >= 1){
         for (let i = 0; i < len; i++) {
             for (let j = i; j >= gap && arr[j] < arr[j-gap]; j -= gap) {
-                [arr[j],arr[j-gap]] = [arr[j-gap],arr[j]]
+                [arr[j],arr[j-gap]] = [arr[j-gap],arr[j]] //进行一轮交换
             }
         }
-        gap = (gap-1)/3;
+        gap = (gap-1)/interval;
     }
+    //返回原数组
     return arr
 }
 
