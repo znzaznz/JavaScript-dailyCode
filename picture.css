@@ -1,0 +1,24 @@
+.picture{
+    background-color: #c9b5b5;
+    height: 100px;
+    width: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.picture > span{
+    font-size: 20px;
+    font-weight: bolder;
+    color: red;
+}
+section{
+    display: flex;
+}
+.showDiv{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid red;
+}
